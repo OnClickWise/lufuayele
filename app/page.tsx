@@ -1,4 +1,5 @@
-import { AboutPreview } from "@/components/sections/about-preview";
+
+import AboutPreview from "@/components/sections/about-preview";
 import { BusinessAreasCarousel } from "@/components/sections/business-areas";
 import { Cta } from "@/components/sections/cta";
 import { Differentiators } from "@/components/sections/differentiators";
