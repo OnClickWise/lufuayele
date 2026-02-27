@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export function Hero() {
   return (
@@ -16,10 +17,10 @@ export function Hero() {
         </p>
 
         <div className="mt-8 flex justify-center gap-4">
-          <Button size="lg">Conheça as Áreas</Button>
-          <Button variant="outline" size="lg">
+          <Link href="/areas"><Button variant="outline" size="lg">Conheça as Áreas</Button></Link>
+          <Link href="/contacto"><Button variant="outline" size="lg">
             Fale Connosco
-          </Button>
+          </Button></Link>
         </div>
       </div>
     </section>

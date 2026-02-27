@@ -20,7 +20,7 @@ export function Header() {
           <Link href="/contacto">Contacto</Link>
         </nav>
 
-        <Button>Solicitar Proposta</Button>
+        <Link href="/contacto"><Button>Solicitar Proposta</Button></Link>
       </div>
     </header>
   )
