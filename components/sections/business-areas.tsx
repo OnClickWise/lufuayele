@@ -30,9 +30,9 @@ const areas = [
 
 export function BusinessAreasCarousel() {
   return (
-    <section className="py-20 bg-slate-50 relative -mt-10">
+    <section className="py-20 -mt-10">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12">
+        <h2 className="text-3xl font-bold  text-center mb-12">
           Áreas de Atuação
         </h2>
 

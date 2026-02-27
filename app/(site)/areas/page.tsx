@@ -1,4 +1,4 @@
-import { BusinessAreas } from "@/components/sections/business-areas";
+import { BusinessAreasCarousel } from "@/components/sections/business-areas";
 
 
 export default function AreasPage() {
@@ -8,7 +8,7 @@ export default function AreasPage() {
         <h1 className="text-4xl font-bold">Áreas de Negócio</h1>
       </div>
 
-      <BusinessAreas/>
+      <BusinessAreasCarousel/>
     </>
   )
 }

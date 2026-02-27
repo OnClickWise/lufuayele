@@ -13,10 +13,10 @@ export function Footer() {
         <div>
           <h4 className="font-semibold mb-3">Links</h4>
           <ul className="space-y-2 text-sm text-slate-400">
-            <li>Sobre</li>
-            <li>Áreas</li>
-            <li>Projetos</li>
-            <li>Contacto</li>
+            <a href="/sobre"><li className="hover:underline">Sobre</li></a>
+            <a href="/areas"><li className="hover:underline">Áreas</li></a>
+            <a href="/projetos"><li className="hover:underline">Projetos</li></a>
+            <a href="/contacto"><li className="hover:underline">Contacto</li></a>
           </ul>
         </div>
 

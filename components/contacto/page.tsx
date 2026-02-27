@@ -7,21 +7,23 @@ export function Contacto() {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus(null);
+    setLoading(true);
 
     try {
       const res = await fetch("/api/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, subject, message }),
-      });
-      const data = await res.json();
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ email, subject, message }),
+});
 
+      const data = await res.json();
       if (data.success) {
-        setStatus("Email enviado com sucesso!");
+        setStatus("Email enviado com sucesso! Verifique seu email de confirmação.");
         setEmail("");
         setSubject("");
         setMessage("");
@@ -30,14 +32,16 @@ export function Contacto() {
       }
     } catch {
       setStatus("Erro ao enviar email.");
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto p-4 border rounded">
+    <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto p-6 border rounded shadow">
       <input
         type="email"
-        placeholder="Email"
+        placeholder="Seu email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         className="w-full p-2 border rounded"
@@ -58,10 +62,14 @@ export function Contacto() {
         className="w-full p-2 border rounded"
         required
       />
-      <button type="submit" className="px-4 py-2 bg-blue-600 text-white rounded">
-        Enviar
+      <button
+        type="submit"
+        className={`w-full px-4 py-2 bg-slate-600 text-white rounded ${loading ? "opacity-70 cursor-not-allowed" : ""}`}
+        disabled={loading}
+      >
+        {loading ? "Enviando..." : "Enviar"}
       </button>
-      {status && <p className="mt-2">{status}</p>}
+      {status && <p className="mt-2 text-center">{status}</p>}
     </form>
   );
 }

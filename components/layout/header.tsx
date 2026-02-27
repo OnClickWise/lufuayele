@@ -6,7 +6,7 @@ import { Logo } from '@/components/logo';
 
 export function Header() {
   return (
-    <header className="w-full border-b bg-white">
+    <header className="w-full border-b ">
       <div className="container mx-auto flex items-center justify-between py-4">
         
         <Link href="/" className="flex items-center gap-2">
