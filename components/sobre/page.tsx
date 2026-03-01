@@ -8,7 +8,7 @@ export function AboutPage() {
       <div className="container mx-auto max-w-6xl">
         
         {/* Header */}
-        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-center">
+        <h1 className="text-3xl md:text-4xl text-[#0B1F3B] font-bold mb-4 text-center">
           LUFUAYELE GROUP
         </h1>
 
@@ -18,7 +18,7 @@ export function AboutPage() {
 
         {/* Quem Somos */}
         <div className="pb-10">
-          <h3 className="text-xl md:text-2xl font-extrabold underline mb-6">
+          <h3 className="text-xl text-[#C6A75E] md:text-2xl font-extrabold underline mb-6">
             Quem Somos
           </h3>
 
@@ -59,12 +59,12 @@ export function AboutPage() {
         <Separator />
 
         {/* Pilares */}
-        <div className="py-10">
-          <h3 className="text-xl md:text-2xl font-extrabold underline mb-8">
+        <div className="py-10 rounded-4xl ">
+          <h3 className="text-xl md:text-2xl text-[#C6A75E] font-extrabold underline mb-8">
             Nossos Pilares
           </h3>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 text-[#C6A75E]  md:grid-cols-3">
             {[
               {
                 title: "Indústria",
@@ -76,11 +76,11 @@ export function AboutPage() {
               },
               {
                 title: "Serviços",
-                text: "Acreditamos que um bom serviço vai além da entrega pontual..."
+                text: "Acreditamos que um bom serviço vai além da entrega pontual, estamos falando de excelência..."
               }
             ].map((item, i) => (
               <Reveal key={i} initialY={40} delay={i * 0.2}>
-                <div className="p-6 shadow-xl rounded-3xl hover:shadow-2xl transition">
+                <div className="p-6 shadow-xl bg-[#0B1F3B] rounded-3xl hover:shadow-2xl transition">
                   <h4 className="font-bold mb-3">{item.title}</h4>
                   <p className="text-sm text-muted-foreground">{item.text}</p>
                 </div>
@@ -93,7 +93,7 @@ export function AboutPage() {
 
         {/* Identidade */}
         <div className="py-10">
-          <h3 className="text-xl md:text-2xl font-extrabold underline text-center mb-10">
+          <h3 className="text-xl md:text-2xl text-[#C6A75E] font-extrabold underline text-center mb-10">
             Nossa Identidade em Ação
           </h3>
 
@@ -105,9 +105,9 @@ export function AboutPage() {
               { title: "Integridade", text: "Nossa palavra é nosso contrato mais valioso." },
             ].map((item, i) => (
               <Reveal key={i} initialX={-30} delay={i * 0.2}>
-                <div className="border-l-4 pl-6 italic">
-                  <h4 className="font-bold">{item.title}</h4>
-                  <Separator className="my-2" />
+                <div className="border-l-4 pl-6 border-[#0B1F3B] italic">
+                  <h4 className="font-bold text-[#C6A75E]">{item.title}</h4>
+                  <Separator className="my-2"/>
                   <p>{item.text}</p>
                 </div>
               </Reveal>
@@ -119,11 +119,11 @@ export function AboutPage() {
 
         {/* Impacto */}
         <div className="py-10">
-          <h3 className="text-xl md:text-2xl font-extrabold underline text-center mb-8">
+          <h3 className="text-xl md:text-2xl text-[#C6A75E] font-extrabold underline text-center mb-8">
             Impacto e Resultados
           </h3>
 
-          <ul className="list-disc ml-6 space-y-3 text-lg md:text-xl">
+          <ul className="list-disc text-[#0B1F3B] ml-6 space-y-3 text-lg md:text-xl">
             {[
               "+500 Projetos realizados",
               "+50 Parcerias ativas",
@@ -142,11 +142,11 @@ export function AboutPage() {
           </p>
         </div>
 
-        <Separator />
-
+        <Separator  />
+            <div className="py-5"></div>
         {/* Promessa */}
-        <div className="py-10 px-6 shadow-2xl rounded-3xl">
-          <h3 className="text-xl md:text-2xl font-extrabold underline text-center mb-6">
+        <div className="py-10 px-6 shadow-2xl bg-[#0B1F3B] rounded-3xl">
+          <h3 className="text-xl md:text-2xl text-[#C6A75E] font-extrabold underline text-center mb-6">
             Nossa Promessa
           </h3>
           <p className="leading-7 text-center max-w-3xl mx-auto">
