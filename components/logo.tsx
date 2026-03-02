@@ -1,15 +1,25 @@
+"use client";
+
 import Image from "next/image";
 
-export function Logo() {
+export default function Logo(){
   return (
-    <div className="flex items-center gap-2">
-      <div className="w-8 h-8 rotate-45" />
-      <Image
-      src="/logo.jpg"
-      alt="logo"
-      height={200}
-      width={200}
-      className="rounded-4xl"/>
+    <div className="relative h-10 sm:h-12 md:h-14 w-[180px] sm:w-[220px]">
+     <Image
+  src="/logo.jpg"
+  alt="LUFUAYELE GROUP"
+  fill
+  priority
+  className="object-contain rounded-xl dark:hidden"
+/>
+
+<Image
+  src="/logodark.jpg"
+  alt="LUFUAYELE GROUP"
+  fill
+  priority
+  className="object-contain hidden dark:block"
+/>
     </div>
   )
 }

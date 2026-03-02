@@ -3,8 +3,9 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Logo } from "@/components/logo"
+
 import Reveal from "../animations/reveal"
+import Logo from "../logo"
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
