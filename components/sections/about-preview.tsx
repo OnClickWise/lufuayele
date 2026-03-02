@@ -1,20 +1,25 @@
-export default function AboutPreview(){
-  return(
-<section className="w-full py-16 px-4 bg-gradient-to-b from-white to-gray-50">
-  <div className="max-w-7xl mx-auto text-center">
-    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0B1F3B] mb-6">
-      LUFUAYELE GROUP
-    </h1>
-    
-    <p className="text-xl md:text-2xl text-[#C6A75E] font-semibold mb-8">
-      Excelência Operacional • Desenvolvimento Sustentável
-    </p>
-    
-    <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
-      Somos um grupo empresarial multissetorial que atua nos segmentos de 
-      <span className="font-semibold text-[#0B1F3B]"> comércio, indústria e prestação de serviços</span>, 
-      movidos pela busca incansável da excelência e comprometidos com um futuro mais sustentável.
-    </p>
-  </div>
-</section>
-)}
+export default function AboutPreview() {
+  return (
+    <section className="w-full py-24 px-6 bg-white">
+      <div className="max-w-6xl mx-auto text-center">
+
+        <p className="text-sm tracking-widest text-[#C6A75E] uppercase mb-4">
+          Sobre o Grupo
+        </p>
+          <div className="w-24 h-[2px] bg-[#C6A75E] mx-auto my-10" />
+        <h2 className="text-4xl md:text-5xl font-bold text-[#0B1F3B] mb-6 leading-tight">
+          Grupo Empresarial com Visão Global
+          <span className="block text-[#C6A75E]">LUFUAYELE GROUP</span>
+        </h2>
+
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          Somos um grupo empresarial multissetorial com atuação estratégica nos
+          segmentos de <span className="font-semibold text-[#0B1F3B]">comércio, indústria e serviços</span>.
+          Operamos com foco em eficiência operacional, inovação contínua e
+          desenvolvimento sustentável.
+        </p>
+
+      </div>
+    </section>
+  )
+}
