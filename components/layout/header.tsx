@@ -14,13 +14,13 @@ export function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-          <Link href="/sobre">Sobre</Link>
-          <Link href="/areas">Áreas</Link>
-          <Link href="/projetos">Projetos</Link>
-          <Link href="/contacto">Contacto</Link>
+          <Link className="hover:underline" href="/sobre">Sobre</Link>
+          <Link className="hover:underline" href="/areas">Áreas</Link>
+          <Link className="hover:underline" href="/projetos">Projetos</Link>
+          <Link className="hover:underline" href="/contacto">Contacto</Link>
         </nav>
 
-        <Link href="/contacto"><Button>Solicitar Proposta</Button></Link>
+        <Link href="/contacto"><Button className="hover:bg-amber-500 hover:text-black">Solicitar Proposta</Button></Link>
       </div>
     </header>
   )

@@ -4,28 +4,28 @@ import Reveal from "../animations/reveal"
 
 export function AboutPage() {
   return (
-    <section className="py-10 px-4">
+    <section className="py-12 px-5 sm:px-6 md:px-8">
       <div className="container mx-auto max-w-6xl">
-        
+
         {/* Header */}
-        <h1 className="text-3xl md:text-4xl text-[#0B1F3B] font-bold mb-4 text-center">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl text-[#0B1F3B] font-bold mb-4 text-center leading-tight">
           LUFUAYELE GROUP
         </h1>
 
-        <h2 className="text-center text-muted-foreground mb-10">
+        <h2 className="text-sm sm:text-base md:text-lg text-center text-muted-foreground mb-10">
           Excelência Operacional e Desenvolvimento Sustentável
         </h2>
 
         {/* Quem Somos */}
-        <div className="pb-10">
-          <h3 className="text-xl text-[#C6A75E] md:text-2xl font-extrabold underline mb-6">
+        <div className="pb-12">
+          <h3 className="text-xl sm:text-2xl text-[#C6A75E] font-extrabold underline mb-6">
             Quem Somos
           </h3>
 
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+
             <Reveal initialX={-25}>
-              <div className="space-y-4 text-left">
+              <div className="space-y-4 text-sm sm:text-base leading-relaxed">
                 <p>
                   A LUFUAYELE GROUP é um grupo empresarial multissetorial que opera
                   na interseção entre comércio, indústria e prestação de serviços.
@@ -46,7 +46,7 @@ export function AboutPage() {
             <Reveal initialX={25}>
               <Image
                 src="/contrato.jpg"
-                alt="conversa"
+                alt="Reunião corporativa"
                 width={600}
                 height={600}
                 className="rounded-2xl w-full h-auto object-cover"
@@ -59,30 +59,32 @@ export function AboutPage() {
         <Separator />
 
         {/* Pilares */}
-        <div className="py-10 rounded-4xl ">
-          <h3 className="text-xl md:text-2xl text-[#C6A75E] font-extrabold underline mb-8">
+        <div className="py-12">
+          <h3 className="text-xl sm:text-2xl text-[#C6A75E] font-extrabold underline mb-8">
             Nossos Pilares
           </h3>
 
-          <div className="grid gap-6 text-[#C6A75E]  md:grid-cols-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 title: "Indústria",
-                text: "Nossas unidades industriais operam com os mais avançados padrões tecnológicos..."
+                text: "Nossas unidades industriais operam com os mais avançados padrões tecnológicos, garantindo eficiência, qualidade e sustentabilidade em cada processo produtivo."
               },
               {
                 title: "Comércio",
-                text: "Em um mercado que exige respostas rápidas, oferecemos soluções ágeis..."
+                text: "Em um mercado que exige respostas rápidas, oferecemos soluções ágeis, estratégicas e alinhadas às necessidades específicas de cada cliente."
               },
               {
                 title: "Serviços",
-                text: "Acreditamos que um bom serviço vai além da entrega pontual, estamos falando de excelência..."
+                text: "Acreditamos que um bom serviço vai além da entrega pontual — estamos falando de excelência, relacionamento e compromisso com resultados."
               }
             ].map((item, i) => (
               <Reveal key={i} initialY={40} delay={i * 0.2}>
-                <div className="p-6 shadow-xl bg-[#0B1F3B] rounded-3xl hover:shadow-2xl transition">
-                  <h4 className="font-bold mb-3">{item.title}</h4>
-                  <p className="text-sm text-muted-foreground">{item.text}</p>
+                <div className="p-6 shadow-xl bg-[#0B1F3B] rounded-3xl hover:shadow-2xl transition duration-300">
+                  <h4 className="font-bold text-[#C6A75E] mb-3">{item.title}</h4>
+                  <p className="text-sm text-slate-200 leading-relaxed">
+                    {item.text}
+                  </p>
                 </div>
               </Reveal>
             ))}
@@ -92,12 +94,12 @@ export function AboutPage() {
         <Separator />
 
         {/* Identidade */}
-        <div className="py-10">
-          <h3 className="text-xl md:text-2xl text-[#C6A75E] font-extrabold underline text-center mb-10">
+        <div className="py-12">
+          <h3 className="text-xl sm:text-2xl text-[#C6A75E] font-extrabold underline text-center mb-10">
             Nossa Identidade em Ação
           </h3>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
             {[
               { title: "Excelência", text: "Não aceitamos o suficiente. Buscamos o extraordinário." },
               { title: "Sustentabilidade", text: "Pensamos no hoje sem comprometer o amanhã." },
@@ -106,9 +108,11 @@ export function AboutPage() {
             ].map((item, i) => (
               <Reveal key={i} initialX={-30} delay={i * 0.2}>
                 <div className="border-l-4 pl-6 border-[#0B1F3B] italic">
-                  <h4 className="font-bold text-[#C6A75E]">{item.title}</h4>
-                  <Separator className="my-2"/>
-                  <p>{item.text}</p>
+                  <h4 className="font-bold text-[#C6A75E] mb-2">{item.title}</h4>
+                  <Separator className="my-2" />
+                  <p className="text-sm sm:text-base leading-relaxed">
+                    {item.text}
+                  </p>
                 </div>
               </Reveal>
             ))}
@@ -118,12 +122,12 @@ export function AboutPage() {
         <Separator />
 
         {/* Impacto */}
-        <div className="py-10">
-          <h3 className="text-xl md:text-2xl text-[#C6A75E] font-extrabold underline text-center mb-8">
+        <div className="py-12">
+          <h3 className="text-xl sm:text-2xl text-[#C6A75E] font-extrabold underline text-center mb-8">
             Impacto e Resultados
           </h3>
 
-          <ul className="list-disc text-[#0B1F3B] ml-6 space-y-3 text-lg md:text-xl">
+          <ul className="list-disc ml-5 sm:ml-6 space-y-3 text-base sm:text-lg md:text-xl text-[#0B1F3B]">
             {[
               "+500 Projetos realizados",
               "+50 Parcerias ativas",
@@ -136,20 +140,20 @@ export function AboutPage() {
             ))}
           </ul>
 
-          <p className="mt-6 text-muted-foreground">
+          <p className="mt-6 text-sm sm:text-base text-muted-foreground leading-relaxed">
             Estes números representam mais do que estatísticas — representam vidas
             impactadas, comunidades fortalecidas e um futuro sendo construído com responsabilidade.
           </p>
         </div>
 
-        <Separator  />
-            <div className="py-5"></div>
-        {/* Promessa */}
-        <div className="py-10 px-6 shadow-2xl bg-[#0B1F3B] rounded-3xl">
-          <h3 className="text-xl md:text-2xl text-[#C6A75E] font-extrabold underline text-center mb-6">
+        <Separator />
+
+       <div className="py-5"></div>
+        <div className="py-12 px-5 sm:px-8 md:px-10 shadow-2xl bg-[#0B1F3B] rounded-3xl">
+          <h3 className="text-xl sm:text-2xl text-[#C6A75E] font-extrabold underline text-center mb-6">
             Nossa Promessa
           </h3>
-          <p className="leading-7 text-center max-w-3xl mx-auto">
+          <p className="leading-relaxed text-sm sm:text-base md:text-lg text-center text-white max-w-3xl mx-auto">
             Na LUFUAYELE GROUP, não entregamos apenas produtos ou serviços.
             Entregamos soluções que transformam realidades.
             Trabalhamos incansavelmente para que cada projeto, cada parceria e
