@@ -1,3 +1,4 @@
+
 export function Differentiators() {
   const items = [
     {
@@ -31,15 +32,17 @@ export function Differentiators() {
             Excelência que Nos Define
           </h2>
         </div>
-
+        
         <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+          
           {items.map((item, index) => (
+            
             <div key={item.title} className="flex gap-6 group">
               
               <span className="text-5xl font-bold text-[#C6A75E] opacity-40 group-hover:opacity-100 transition">
                 0{index + 1}
               </span>
-
+              
               <div>
                 <h3 className="text-xl font-semibold mb-2">
                   {item.title}
@@ -48,12 +51,14 @@ export function Differentiators() {
                 <p className="text-white/70 text-sm">
                   {item.desc}
                 </p>
+                
               </div>
-
+            
             </div>
           ))}
+          
         </div>
-
+          
       </div>
     </section>
   )
