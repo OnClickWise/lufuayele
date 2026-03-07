@@ -1,10 +1,34 @@
-export function Logo() {
+"use client"
+
+import Image from "next/image"
+import { useTheme } from "next-themes"
+import { useEffect, useState } from "react"
+import { cn } from "@/lib/utils"
+
+export function Logo({ className }: { className?: string }) {
+  const { resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return null
+
+  const logoSrc =
+    resolvedTheme === "dark"
+      ? "/images/logo-light.png"
+      : "/images/logo-dark.png"
+
   return (
-    <div className="flex items-center gap-2">
-      <div className="w-8 h-8 bg-slate-900 rotate-45" />
-      <span className="font-bold text-xl tracking-wide">
-        LUFUAYELE
-      </span>
+    <div className={cn("flex items-center", className)}>
+      <Image
+        src={logoSrc}
+        alt="LUFUAYELE Logotipo Oficial"
+        width={160}
+        height={50}
+        priority
+      />
     </div>
   )
 }
