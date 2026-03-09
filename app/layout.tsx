@@ -18,6 +18,7 @@ const inter = Inter({
   variable: "--font-body",
 })
 
+
 export default function RootLayout({
   children,
 }: {
