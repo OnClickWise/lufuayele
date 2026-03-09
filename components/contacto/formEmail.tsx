@@ -51,7 +51,7 @@ export function FormEmail() {
             placeholder="Seu email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#C6A75E] focus:border-transparent"
+            className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-800 focus:border-transparent"
             required
           />
         </div>
@@ -63,7 +63,7 @@ export function FormEmail() {
             placeholder="Assunto"
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
-            className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#C6A75E] focus:border-transparent"
+            className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-800 focus:border-transparent"
             required
           />
         </div>
@@ -75,7 +75,7 @@ export function FormEmail() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             rows={5}
-            className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-[#C6A75E] focus:border-transparent resize-none"
+            className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-green-800 focus:border-transparent resize-none"
             required
           />
         </div>
