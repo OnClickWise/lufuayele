@@ -11,6 +11,7 @@ import {
 } from "lucide-react"
 
 import Link from "next/link"
+import { FormEmail } from "@/components/contacto/formEmail"
 
 export default function ContactoPage() {
   return (
@@ -179,32 +180,7 @@ export default function ContactoPage() {
                 Preencha o formulário e a nossa equipa entrará em contacto.
               </p>
 
-              <form className="mt-8 space-y-6">
-
-                <Input placeholder="Nome completo" />
-
-                <Input
-                  type="email"
-                  placeholder="Email"
-                />
-
-                <Input
-                  placeholder="Telefone"
-                />
-
-                <Textarea
-                  placeholder="Escreva a sua mensagem"
-                  rows={5}
-                />
-
-                <Button
-                  size="lg"
-                  className="w-full"
-                >
-                  Enviar Mensagem
-                </Button>
-
-              </form>
+             <FormEmail/>
 
               {/* ALTERNATIVA WHATSAPP */}
 

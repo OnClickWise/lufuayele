@@ -28,7 +28,7 @@ export function Header() {
         {/* LOGO */}
 
         <Link href="/" className="flex items-center">
-          <Logo />
+          <Logo className="h-10 w-auto" />
         </Link>
 
         {/* DESKTOP NAV */}
