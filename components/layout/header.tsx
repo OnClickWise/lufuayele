@@ -22,25 +22,24 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/70 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
-      {/* CONTAINER */}
-
+      
       <div className="flex w-full h-16 items-center justify-between px-4 sm:px-6 lg:px-10 xl:px-16">
-        {/* LOGO */}
 
         <Link href="/" className="flex items-center">
           <Logo className="h-10 w-auto" />
         </Link>
 
-        {/* DESKTOP NAV */}
+        {/* DESKTOP MENU */}
 
         <div className="hidden lg:flex items-center gap-8">
+
           <NavigationMenu>
+
             <NavigationMenuList className="gap-6">
+
               <NavigationMenuItem>
                 <NavLink href="/">Home</NavLink>
               </NavigationMenuItem>
-
-              {/* EMPRESA */}
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Empresa</NavigationMenuTrigger>
@@ -56,20 +55,18 @@ export function Header() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
-              {/* SERVIÇOS */}
-
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Serviços</NavigationMenuTrigger>
 
                 <NavigationMenuContent className="bg-card border border-border rounded-xl shadow-lg">
+
                   <div className="grid grid-cols-2 gap-10 p-10 w-[720px]">
-                    <Mega
-                      icon={Building2}
-                      title="Infraestrutura & Obras Públicas"
-                    />
+
+                    <Mega icon={Building2} title="Infraestrutura & Obras Públicas" />
                     <Mega icon={Truck} title="Comércio & Fornecimento" />
                     <Mega icon={Wrench} title="Logística & Transporte" />
                     <Mega icon={Cpu} title="Tecnologia & Serviços Técnicos" />
+
                   </div>
 
                   <div className="border-t border-border p-6">
@@ -80,23 +77,34 @@ export function Header() {
                       Ver todas as unidades →
                     </Link>
                   </div>
+
                 </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              {/* NOVO LINK */}
+
+              <NavigationMenuItem>
+                <NavLink href="/galeria">Galeria</NavLink>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
                 <NavLink href="/contacto">Contacto</NavLink>
               </NavigationMenuItem>
+
             </NavigationMenuList>
+
           </NavigationMenu>
+
         </div>
 
         {/* ACTIONS */}
 
         <div className="flex items-center gap-3">
+
           <ThemeToggle />
 
           <Link
-            href="https://wa.me/244923019166?text=Olá%20gostaria%20de%20solicitar%20uma%20proposta"
+            href="https://wa.me/244923019166"
             target="_blank"
             className="hidden md:block"
           >
@@ -105,25 +113,28 @@ export function Header() {
             </Button>
           </Link>
 
-          {/* MOBILE MENU BUTTON */}
-
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="lg:hidden p-2 rounded-md hover:bg-muted transition"
           >
             {mobileOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
+
         </div>
+
       </div>
 
       {/* MOBILE MENU */}
 
       {mobileOpen && (
         <div className="lg:hidden border-t border-border bg-background">
+
           <div className="flex flex-col space-y-6 px-6 py-8">
+
             <MobileLink href="/">Home</MobileLink>
             <MobileLink href="/sobre">Empresa</MobileLink>
             <MobileLink href="/areas">Serviços</MobileLink>
+            <MobileLink href="/galeria">Galeria</MobileLink>
             <MobileLink href="/contacto">Contacto</MobileLink>
 
             <Link
@@ -135,20 +146,17 @@ export function Header() {
                 Solicitar Proposta
               </Button>
             </Link>
+
           </div>
+
         </div>
       )}
+
     </header>
   );
 }
 
-function NavLink({
-  href,
-  children,
-}: {
-  href: string;
-  children: React.ReactNode;
-}) {
+function NavLink({ href, children }: any) {
   return (
     <Link
       href={href}
@@ -159,7 +167,7 @@ function NavLink({
   );
 }
 
-function DropdownLink({ href, label }: { href: string; label: string }) {
+function DropdownLink({ href, label }: any) {
   return (
     <Link
       href={href}
@@ -170,43 +178,27 @@ function DropdownLink({ href, label }: { href: string; label: string }) {
   );
 }
 
-function Mega({ icon: Icon, title }: { icon: any; title: string }) {
+function Mega({ icon: Icon, title }: any) {
   return (
     <div>
+
       <div className="flex items-center gap-2 mb-3">
         <Icon className="w-5 h-5 text-primary" />
-
         <h4 className="font-semibold text-foreground">{title}</h4>
       </div>
 
       <ul className="space-y-2 text-sm text-muted-foreground">
-        <li className="hover:text-primary transition cursor-pointer">
-          Construção Civil
-        </li>
-
-        <li className="hover:text-primary transition cursor-pointer">
-          Fornecimento
-        </li>
-
-        <li className="hover:text-primary transition cursor-pointer">
-          Instalações
-        </li>
-
-        <li className="hover:text-primary transition cursor-pointer">
-          Manutenção
-        </li>
+        <li className="hover:text-primary cursor-pointer">Construção Civil</li>
+        <li className="hover:text-primary cursor-pointer">Fornecimento</li>
+        <li className="hover:text-primary cursor-pointer">Instalações</li>
+        <li className="hover:text-primary cursor-pointer">Manutenção</li>
       </ul>
+
     </div>
   );
 }
 
-function MobileLink({
-  href,
-  children,
-}: {
-  href: string;
-  children: React.ReactNode;
-}) {
+function MobileLink({ href, children }: any) {
   return (
     <Link
       href={href}

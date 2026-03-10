@@ -69,6 +69,10 @@ export function Footer() {
               </li>
 
               <li>
+                <FooterLink href="/galeria">Galeria</FooterLink>
+              </li>
+
+              <li>
                 <FooterLink href="/contacto">Contacto</FooterLink>
               </li>
             </ul>
