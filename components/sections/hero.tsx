@@ -15,7 +15,7 @@ const slides = [
       "Coordenação integrada de fornecedores",
       "Execução com excelência operacional",
     ],
-    image: "/images/banner1.png",
+    image: "/images/banner3.png",
   },
   {
     title: "SAÚDE & MATERIAL HOSPITALAR",
@@ -26,7 +26,7 @@ const slides = [
       "Conformidade regulatória e segurança",
       "Atendimento institucional ágil",
     ],
-    image: "/images/banner2.png",
+    image: "/images/banner4.png",
   },
   {
     title: "TRANSPORTE & LOGÍSTICA",
@@ -37,10 +37,10 @@ const slides = [
       "Planejamento e otimização de rotas",
       "Monitoramento e controle em tempo real",
     ],
-    image: "/images/banner3.png",
+    image: "/images/banner5.png",
   },
   {
-    title: "AGRO & TECNOLOGIA",
+    title: "AGRO NEGÓCIOS",
     subtitle: "Produtividade, inovação e sustentabilidade",
     description: [
       "Gestão agrícola estratégica",
@@ -48,7 +48,19 @@ const slides = [
       "Automação e análise de dados",
       "Aumento de produtividade sustentável",
     ],
-    image: "/images/banner4.png",
+    image: "/images/banner1.png",
+  },
+
+   {
+    title: "TECNOLOGIA",
+    subtitle: "Produtividade, inovação e sustentabilidade",
+    description: [
+      "Gestão agrícola estratégica",
+      "Soluções tecnológicas aplicadas ao campo",
+      "Automação e análise de dados",
+      "Aumento de produtividade sustentável",
+    ],
+    image: "/images/banner2.png",
   },
 ];
 
